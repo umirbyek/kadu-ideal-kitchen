@@ -30,7 +30,8 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
         <a href="#home" className="text-2xl font-serif font-semibold tracking-tight">
-          Kadu Ideal Kitchen<span className="text-accent italic">.</span>
+          Kadu Ideal Kitchen<span className="text-accent italic"></span>
+         
         </a>
 
         {/* Desktop Nav */}

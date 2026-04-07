@@ -36,7 +36,7 @@ export default function About() {
             </h2>
             <div className="space-y-6 text-text-secondary font-light leading-relaxed">
               <p>
-                Сайн байна уу? Намайг [Таны Нэр] гэдэг. Би интериер дизайны чиглэлээр мэргэшсэн бөгөөд орон зайн төлөвлөлт, ажлын зураг гаргах, мөн захиалгат тавилга үйлдвэрлэлийн чиглэлээр ажилладаг.
+                Сайн байна уу? Намайг Саулетбай Кадирбек гэдэг. Би интериер дизайны чиглэлээр мэргэшсэн бөгөөд орон зайн төлөвлөлт, ажлын зураг гаргах, мөн захиалгат тавилга үйлдвэрлэлийн чиглэлээр ажилладаг.
               </p>
               <p>
                 Хүн бүрийн амьдралын хэв маяг, онцлогт тохирсон, тав тухтай, гоо зүйн өндөр мэдрэмжтэй орчныг бүрдүүлэхийг зорьдог. Зөвхөн үзэмжтэй байхаас гадна, хэрэглээнд бүрэн нийцсэн, чанартай тавилгыг өөрийн гараар урлан бүтээдэг нь миний давуу тал юм.
@@ -48,7 +48,7 @@ export default function About() {
 
             <div className="mt-12 grid grid-cols-2 gap-8">
               <div>
-                <h4 className="text-4xl font-serif text-text-primary mb-2">5+</h4>
+                <h4 className="text-4xl font-serif text-text-primary mb-2">10+</h4>
                 <p className="text-sm tracking-wider uppercase text-text-secondary">Жилийн туршлага</p>
               </div>
               <div>
