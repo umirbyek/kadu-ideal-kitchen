@@ -30,7 +30,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-sm tracking-wider uppercase text-text-secondary mb-1">Утас</p>
-                  <p className="text-lg font-serif">+976 9911 2233</p>
+                  <p className="text-lg font-serif">+976 9001 6444</p>
                 </div>
               </div>
               
@@ -40,7 +40,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-sm tracking-wider uppercase text-text-secondary mb-1">И-мэйл</p>
-                  <p className="text-lg font-serif">hello@kadu.mn</p>
+                  <p className="text-lg font-serif">kadu0126@gmail.com</p>
                 </div>
               </div>
 

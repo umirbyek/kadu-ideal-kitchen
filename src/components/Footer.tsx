@@ -6,9 +6,9 @@ export default function Footer() {
           <a href="#home" className="text-2xl font-serif font-semibold tracking-tight">
             Kadu Ideal Kitchen<span className="text-accent italic">.</span>
           </a>
-          <p className="text-bg-secondary/60 text-sm mt-2 font-light">
+          {/* <p className="text-bg-secondary/60 text-sm mt-2 font-light">
             Интериер дизайн & Захиалгат тавилга
-          </p>
+          </p> */}
         </div>
         
         <div className="text-center md:text-right text-sm text-bg-secondary/60 font-light flex flex-col items-center md:items-end gap-2">
