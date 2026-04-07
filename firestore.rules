@@ -1,0 +1,61 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // ===============================================================
+    // Assumed Data Model
+    // ===============================================================
+    //
+    // Collection: projects
+    // Document ID: auto-generated
+    // Fields:
+    //   - title: string (required)
+    //   - category: string (required)
+    //   - coverImage: string (required)
+    //   - shortDescription: string (required)
+    //   - details: string (required, JSON stringified array)
+    //   - createdAt: timestamp (optional)
+    //
+    // ===============================================================
+
+    // Check if the user is authenticated
+    function isAuthenticated() {
+       return request.auth != null;
+    }
+
+    // Check if the user is the admin
+    function isAdmin() {
+      return isAuthenticated() && 
+        (request.auth.token.email == "umirbyek0731@gmail.com" || request.auth.token.email == "kadu0126@gmail.com") && 
+        request.auth.token.email_verified == true;
+    }
+
+    // Validate required fields exist
+    function hasRequiredFields(fields) {
+       return request.resource.data.keys().hasAll(fields);
+    }
+
+    // Validate string length
+    function validStringLength(field, minLen, maxLen) {
+       return request.resource.data[field] is string &&
+         request.resource.data[field].size() >= minLen &&
+         request.resource.data[field].size() <= maxLen;
+    }
+
+    function isValidProject() {
+      return hasRequiredFields(['title', 'category', 'coverImage', 'shortDescription', 'details']) &&
+        validStringLength('title', 1, 200) &&
+        validStringLength('category', 1, 50) &&
+        validStringLength('coverImage', 1, 1000) &&
+        validStringLength('shortDescription', 1, 1000) &&
+        validStringLength('details', 1, 100000); // Allow up to 100KB for JSON string
+    }
+
+    match /projects/{projectId} {
+      allow read: if true; // Publicly readable
+      allow create: if isAdmin() && isValidProject();
+      allow update: if isAdmin() && isValidProject();
+      allow delete: if isAdmin();
+    }
+  }
+}
